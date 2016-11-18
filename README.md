@@ -1,5 +1,4 @@
 # MPermissionUtils
-Android6.0 运行时权限 超轻量级工具类
 GitHub上有很多解决AndroidM运行时权限的库，但是个人不想就因为一个权限问题而引入一个库，所以集各位库中的代码，简单封装了一个工具类。使用起来很简单。
 由于时间匆忙，所以后期有时间会再继续进行优化。
 
@@ -39,6 +38,6 @@ GitHub上有很多解决AndroidM运行时权限的库，但是个人不想就因
  ![image](https://github.com/Airsaid/MPermissionUtils/blob/master/gif/1.gif)
  
 #感谢
-https://github.com/hongyangAndroid/MPermissions
 https://github.com/HanderWei/PermissionBestPractice
+https://github.com/hongyangAndroid/MPermissions
 https://github.com/linglongxin24/MPermissions
