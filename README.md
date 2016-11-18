@@ -38,6 +38,6 @@ GitHub上有很多解决AndroidM运行时权限的库，但是个人不想就因
  ![image](https://github.com/Airsaid/MPermissionUtils/blob/master/gif/1.gif)
  
 #感谢
-1,https://github.com/HanderWei/PermissionBestPractice
-2,https://github.com/hongyangAndroid/MPermissions
-3,https://github.com/linglongxin24/MPermissions
+* https://github.com/HanderWei/PermissionBestPractice
+* https://github.com/hongyangAndroid/MPermissions
+* https://github.com/linglongxin24/MPermissions
