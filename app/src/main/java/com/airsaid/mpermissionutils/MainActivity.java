@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void callPhone(View v) {
-        MPermissionUtils.onRequestPermissionsResult(this, 1, new String[]{Manifest.permission.CALL_PHONE}
+        MPermissionUtils.requestPermissionsResult(this, 1, new String[]{Manifest.permission.CALL_PHONE}
                 , new MPermissionUtils.OnPermissionListener() {
                     @Override
                     public void onPermissionGranted() {

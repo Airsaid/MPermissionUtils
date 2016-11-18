@@ -25,17 +25,17 @@ public class MPermissionUtils {
 
     private static int mRequestCode = -1;
 
-    public static void onRequestPermissionsResult(Activity activity, int requestCode
+    public static void requestPermissionsResult(Activity activity, int requestCode
             , String[] permission, OnPermissionListener callback){
         requestPermissions(activity, requestCode, permission, callback);
     }
 
-    public static void onRequestPermissionsResult(android.app.Fragment fragment, int requestCode
+    public static void requestPermissionsResult(android.app.Fragment fragment, int requestCode
             , String[] permission, OnPermissionListener callback){
         requestPermissions(fragment, requestCode, permission, callback);
     }
 
-    public static void onRequestPermissionsResult(android.support.v4.app.Fragment fragment, int requestCode
+    public static void requestPermissionsResult(android.support.v4.app.Fragment fragment, int requestCode
             , String[] permission, OnPermissionListener callback){
         requestPermissions(fragment, requestCode, permission, callback);
     }
