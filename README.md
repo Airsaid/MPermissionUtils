@@ -10,7 +10,7 @@ GitHub上有很多解决AndroidM运行时权限的库，但是个人不想就因
 
 * 第一步（当用户点击拨打电话按钮时执行如下代码）：
 ```
- MPermissionUtils.onRequestPermissionsResult(this, 1, new String[]{Manifest.permission.CALL_PHONE}
+MPermissionUtils.requestPermissionsResult(this, 1, new String[]{Manifest.permission.CALL_PHONE}
                 , new MPermissionUtils.OnPermissionListener() {
                     @Override
                     public void onPermissionGranted() {
