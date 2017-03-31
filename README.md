@@ -1,9 +1,9 @@
 # MPermissionUtils
-GitHub上有很多解决AndroidM运行时权限的库，但是个人不想就因为一个权限问题而引入一个库，所以集各位库中的代码，简单封装了一个工具类。使用起来很简单。
+GitHub 上有很多解决 AndroidM 运行时权限的库，但是个人不想就因为一个权限问题而引入一个库，所以集各位库中的代码，简单封装了一个工具类。使用起来很简单。
 由于时间匆忙，所以后期有时间会再继续进行优化。
 
 # 使用
-以拨打电话为例，首先在Manifest文件中定义好拨打电话权限：
+以拨打电话为例，首先在 Manifest 文件中定义好拨打电话权限：
 ```
   <uses-permission android:name="android.permission.CALL_PHONE"/>
 ```
@@ -24,7 +24,7 @@ MPermissionUtils.requestPermissionsResult(this, 1, new String[]{Manifest.permiss
                 });
 ```
 
-* 第二步（重写onRequestPermissionsResult()方法，使用MPermissionUtils类中的方法进行接管）：
+* 第二步（重写 onRequestPermissionsResult() 方法，使用 MPermissionUtils 类中的方法进行接管）：
 ```
 @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -32,7 +32,7 @@ MPermissionUtils.requestPermissionsResult(this, 1, new String[]{Manifest.permiss
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 ```
-该步由于操作不会改变，所以可以直接放在BaseActivit和BaseFragment中。
+该步由于操作不会改变，所以可以直接放在 BaseActivit 和 BaseFragment 中。
 
 # GIF
  ![image](https://github.com/Airsaid/MPermissionUtils/blob/master/gif/1.gif)
