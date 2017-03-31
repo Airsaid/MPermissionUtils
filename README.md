@@ -2,7 +2,7 @@
 GitHub上有很多解决AndroidM运行时权限的库，但是个人不想就因为一个权限问题而引入一个库，所以集各位库中的代码，简单封装了一个工具类。使用起来很简单。
 由于时间匆忙，所以后期有时间会再继续进行优化。
 
-#使用
+# 使用
 以拨打电话为例，首先在Manifest文件中定义好拨打电话权限：
 ```
   <uses-permission android:name="android.permission.CALL_PHONE"/>
@@ -34,10 +34,10 @@ MPermissionUtils.requestPermissionsResult(this, 1, new String[]{Manifest.permiss
 ```
 该步由于操作不会改变，所以可以直接放在BaseActivit和BaseFragment中。
 
-#GIF
+# GIF
  ![image](https://github.com/Airsaid/MPermissionUtils/blob/master/gif/1.gif)
  
-#感谢
+# 感谢
 * https://github.com/HanderWei/PermissionBestPractice
 * https://github.com/hongyangAndroid/MPermissions
 * https://github.com/linglongxin24/MPermissions
