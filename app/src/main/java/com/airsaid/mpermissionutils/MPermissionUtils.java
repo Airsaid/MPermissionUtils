@@ -61,6 +61,7 @@ public class MPermissionUtils {
             List<String> deniedPermissions = getDeniedPermissions(getContext(object), permissions);
             if(deniedPermissions.size() > 0){
                 mRequestCode = requestCode;
+
                 if(object instanceof Activity){
                     ((Activity) object).requestPermissions(deniedPermissions
                             .toArray(new String[deniedPermissions.size()]), requestCode);
@@ -70,8 +71,6 @@ public class MPermissionUtils {
                 }else if(object instanceof android.support.v4.app.Fragment){
                     ((android.support.v4.app.Fragment) object).requestPermissions(deniedPermissions
                             .toArray(new String[deniedPermissions.size()]), requestCode);
-                }else{
-                    mRequestCode = -1;
                 }
             }
         }
@@ -96,7 +95,7 @@ public class MPermissionUtils {
      * 请求权限结果，对应onRequestPermissionsResult()方法。
      */
     public static void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if(mRequestCode != -1 && requestCode == mRequestCode){
+        if(requestCode == mRequestCode){
             if(verifyPermissions(grantResults)){
                 if(mOnPermissionListener != null)
                     mOnPermissionListener.onPermissionGranted();
@@ -136,6 +135,11 @@ public class MPermissionUtils {
      * 验证权限是否都已经授权
      */
     private static boolean verifyPermissions(int[] grantResults) {
+        // 如果请求被取消，则结果数组为空
+        if(grantResults.length <= 0)
+            return false;
+
+        // 循环判断每个权限是否被拒绝
         for (int grantResult : grantResults) {
             if (grantResult != PackageManager.PERMISSION_GRANTED) {
                 return false;
@@ -208,5 +212,4 @@ public class MPermissionUtils {
     }
 
     private static OnPermissionListener mOnPermissionListener;
-
 }
